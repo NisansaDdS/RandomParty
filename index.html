@@ -1,0 +1,41 @@
+<div style="align-content: center;margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;text-align: center;"><h1 id="party">
+</h1>
+<a href="">No! Give me a new Party</a>
+</div>
+
+
+
+<script>
+var front= ["Sri Lanka","Podujana","Ekasth","Nidahas","People's","Our","Freedom","National","United","Ceylon","Workers'","Desha","Vimukthi","Janatha","Eelam","Democratic","Mahajana","All","New","Progressive","Supreme","Communist","Left","Sama","Mahajana","Liberation","Vimukthi","Bahujana","Maoist","Unity","Revolutionary","Frontline","Jathika","Hela","Mawbima","Nava","Socialist","Equality","Bolshevik","Buddhist","Republican"];
+var back= ["Peramuna","Front","Alliance","Congress","Pakshaya","Party","Union of Workers","Union","Coalition","Power","Urumaya","Sabha","Organisation"];
+
+function getRandomIntInclusive(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+}
+
+count=getRandomIntInclusive(2, 5);
+
+
+
+var shuffled = front.sort(function(){ return 0.5 - Math.random() });
+var selected = shuffled.slice(0,count);
+
+s=selected.join(" ");
+
+var shuffled = back.sort(function(){ return 0.5 - Math.random() });
+var selected = shuffled.slice(0,1);
+
+s+=" "+selected.join(" ");
+
+
+
+
+document.getElementById("party").innerHTML = s;
+
+
+</script>
